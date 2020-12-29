@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Home Page -->
+<html>
+  <head>
+    <title>Pandemic Essentials Emporium</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS import -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/theme.css">
+    <!-- CSS for payment methods -->
+    <link rel="stylesheet" type="text/css" href="styles/homegrid.css">
+    <!-- JavaScript required for Bootstrap, including jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Personal JavaScript to make the responsive navbar work -->
+    <script src="scripts/script.js"></script>
+    <!-- Website icon. Using .png because imgur doesn't accept .ico -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/rmrvj2W.png">
+  </head>
+  <body>
+    <!-- For the navigation bar above -->
+    <!-- The navigation buttons are encased in their own divs just in case they need to be switched to <a href> tags and I don't want to redo the class rewiring -->
+    <nav class="container-fluid navbar" id="navlist">
+      <!-- Logo for the website -->
+      <div class="logo">
+        <img src="https://i.imgur.com/rmrvj2W.png" alt="Pandemic Essentials Emporium's Company Logo">
+      </div>
+      <!-- Navigation buttons -->
+      <div>
+        <button onclick="window.location.href = 'index.html';" class="button navbar">Home</button>
+      </div>
+      <div>
+        <button onclick="window.location.href = 'products/index.html';" class="button navbar">Products</button>
+      </div>
+      <div>
+        <button onclick="window.location.href = 'support/index.html';" class="button navbar">Support</button>
+      </div>
+      <div>
+        <button onclick="window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button navbar">Free Gift!</button>
+      </div>
+      <!-- Mobile menu bars -->
+      <a href="javascript:void(0);" class="icon" onclick="menubarResponse()">
+        <img src="https://i.imgur.com/RhRPZUa.png">
+      </a>
+    </nav>
+    <!-- Main body of the webpage, no navbar and bottom help bar -->
+    <!-- Body parts are organised into banner, altone and alttwo -->
+    <!-- The banner is the main image -->
+    <!-- Sections of the webpage alternate between altone and alttwo to give the webpage a dynamic feel -->
+    <!-- altone is darker than alttwo -->
+    <!-- alttwo has reversed elements in desktop mode -->
+    <div class="main">
+      <!-- Introductory banner for all non-product pages -->
+      <div class="banner">
+        <img src="https://i.imgur.com/tNocCAT.jpg" alt="Toilet Paper">
+        <h1>Pandemic Essentials Emporium</h1>
+        <h3>a eUphoREA service</h3>
+      </div>
+      <!-- First description element -->
+      <div class="altone">
+        <div>
+          <img src="https://i.imgur.com/5JPiS7o.jpg">
+        </div>
+        <div>
+          <h2><u>About</u></h2>
+          <p>Welcome to <i>Pandemic Essentials Emporium</i>. Here at our store, we offer a wide range of products which you can buy at our brick-and-mortar shop or order online now with a click of a button. We guarantee the lowest prices in the town and assure you that we are always in stock.</p>
+        </div>
+      </div>
+      <!-- Second description element -->
+      <div class="alttwo">
+        <div>
+          <img src="https://i.imgur.com/VZDtlQc.jpg">
+        </div>
+        <div>
+          <h2><u>Products</u></h2>
+          <p>We offer premium, world-class grade goods to our customer. From toilet paper to hand sanitizers, we have all you need to see you through a lockdown, all at greater discounts than our competitors can afford. You can view a list of our products at <a href="products/index.html">our product page</a>.</p>
+        </div>
+      </div>
+      <!-- Third description element -->
+      <div class="altone">
+        <div>
+          <h2><u>Payment Options</u></h2>
+          <!-- This part is supposed to appear as a 2 by 3 grid -->
+          <div class="optionsgrid container-fluid">
+            <div id="disciplecardimg">
+              <img src="https://i.imgur.com/2DGTJrG.jpg" alt="Disciple card">
+            </div>
+            <div id="disciplecarddesc">
+              <h3>Disciple Card</h3>
+              <p>If you are a student, you can use this card to get a 20% discount on all products.</p>
+            </div>
+            <div id="pisaimg">
+              <img src="https://i.imgur.com/1ltx7u1.jpg" alt="Pisa card">
+            </div>
+            <div id="pisadesc">
+              <h3>Pisa</h3>
+              <p>This payment method is for the weightlifters who can lift thousands of tonnes of rock as payment for our products.</p>
+            </div>
+            <div id="penpalimg">
+              <img src="https://i.imgur.com/Q3EWCwg.png" alt="PenPal">
+            </div>
+            <div id="penpaldesc">
+              <h3>PenPal</h3>
+              <p>If you don't have a credit or debit card, you can mail us a cheque amounting to the grand total of the products purchased on our online store.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fourth description element -->
+      <div class="alttwo">
+        <div>
+          <h2><u>Help and FAQs</u></h2>
+          <p>If you require any assistance, you can check out our <a href="support/index.html">Support</a> page.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom of page description of company details. -->
+    <div class="ribbon">
+      <div class="logo">
+        <img src="https://i.imgur.com/rmrvj2W.png" alt="Pandemic Essentials Emporium's Company Logo">
+      </div>
+      <div class="bottominfo">
+        <p>
+          Phone Number: 1800 8742 2243
+          <br>
+          Email: support@peemporium.com
+          <br>
+          Address: 42 Hwa Chong Institution Drive 2 S686065
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

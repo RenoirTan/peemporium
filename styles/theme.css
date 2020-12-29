@@ -1,0 +1,312 @@
+/* Import custom font */
+@font-face {
+  font-family: "Stone Sans";
+  src: url("../fonts/stone-sans/Stone Sans Regular.woff2") format("woff2"),
+       url("../fonts/stone-sans/Stone Sans Regular.ttf") format("ttf");
+}
+
+/* Setup theme*/
+body {
+  background-image: url("https://i.imgur.com/paHei0a.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Stone Sans;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Custom highlight color :p */
+::selection {
+  background-color: #0000FF;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background-color: #0000FF;
+  color: #FFFFFF;
+}
+
+/* Navbar configurations */
+
+/* Create container for navigation bar */
+.navbar.container-fluid {
+  background-color: #AAAAAA;
+  padding: 0 0 0 0;
+  margin-bottom: 10px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* Separate the buttons */
+.navbar.container-fluid div {
+  margin: 10px 10px 10px 10px;
+}
+
+/* Make sure the logo does not cover half of the screen */
+.navbar.container-fluid .logo img {
+  max-height: 50px;
+}
+
+/* Responsive menu button */
+a.icon {
+  display: none;
+  float: right;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/* Configure buttons */
+.button {
+  text-align: center;
+  color: #0000FF;
+  cursor: pointer;
+  outline: none;
+  border-width: 2px;
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #0000FF;
+  background-color: #CCCCCC;
+  background-size: 100% 200%;
+  transition: 0.3s;
+}
+
+/* Hover over button transition destination */
+.button:hover {
+  color: #FFFFFF;
+  background-position: 0% 103%;
+}
+
+/* Navigation buttons */
+.button.navbar {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: #AAAAAA;
+  background-image: linear-gradient(to top, #0000FF 50%, #AAAAAA 50%);
+}
+
+/* Persistent navbar */
+nav.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+/* Mobile navbar */
+@media screen and (max-width: 600px) {
+  nav.navbar.container-fluid {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Find all the links in the navbar ul and hide them */
+  nav.navbar.container-fluid div:not(:first-child) {
+    display: none;
+  }
+
+  /* Display menu bars */
+  nav.navbar a.icon {
+    display: block;
+  }
+
+  /* Center navbar logo */
+  nav.logo {
+    margin: auto auto auto auto;
+  }
+
+  /* Show options when click */
+  nav.navbar.mobile {
+    position: sticky;
+    display: inline-flex;
+  }
+
+  nav.navbar a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /* Show navigation options when menu bar is pressed
+  i.e. when navigation div class has .mobile */
+  nav.navbar.mobile div:not(:first-child) {
+    display: inline-flex;
+    float: none;
+    align-self: center;
+  }
+}
+
+/* All the main stuff from here onwards */
+
+/* Configure main body */
+
+/* Give images breathing space */
+.main img {
+  margin: 10px 10% 10px 10%;
+  max-width: 150%;
+}
+
+/* Limit main body size to avoid wall of text */
+.main {
+  align-self: center;
+  margin: 0 25% 0 25%;
+  /*background-color: #CCCCCC;
+  background-clip: content-box;*/
+}
+
+/* Big banner */
+.banner img {
+  max-width: 90%;
+  margin: 10px 5% 10px 5%;
+  display: block;
+}
+
+/* Change banner position */
+.banner {
+  background-color: #888888;
+  margin: 10px auto -10px auto;
+  padding: 10px auto 10px auto;
+}
+
+/* Banner text configuration */
+
+.banner h1 {
+  text-align: center;
+}
+
+.banner h3 {
+  text-align: right;
+  color: #666666;
+  margin: 10px 10px 10px 10px;
+}
+
+/* Alternating segment 1: darker, normal order */
+.altone {
+  background-color: #AAAAAA;
+  margin: 20px 0 0px 0;
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Alternating segment 2: lighter*/
+/* When using desktop view, the order of the first child div and the second child div is reversed for variation and contrast from .altone */
+.alttwo {
+  background-color: #BBBBBB;
+  margin: 20px 0 0px 0;
+  display: inline-flex;
+  flex-direction: row-reverse; /* Reverse order */
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.altone div {
+  margin: 10% 10% 10% 10%;
+  display: inline-block;
+  max-width: 80%;
+}
+
+.alttwo div {
+  margin: 10% 10% 10% 10%;
+  display: inline-block;
+  max-width: 80%;
+}
+
+/* Expand the non-header child divs in .main's child divs */
+
+.altone div:not(:first-child) {
+  width: 100%;
+}
+
+.alttwo div:not(:first-child) {
+  width: 100%;
+}
+
+.altone div img {
+  max-width: 100%;
+}
+
+.alttwo div img {
+  max-width: 100%;
+}
+
+/* Main difference for the buttons is the initial background colour (inherited). */
+
+.altone .button {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: #AAAAAA;
+  background-image: linear-gradient(to top, #0000FF 50%, #AAAAAA 50%);
+}
+
+.alttwo .button {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: #AAAAAA;
+  background-image: linear-gradient(to top, #0000FF 50%, #BBBBBB 50%);
+}
+
+.altone .button:hover {
+  color: #FFFFFF;
+  background-position: 0% 101%;
+}
+
+.alttwo .button:hover {
+  color: #FFFFFF;
+  background-position: 0% 103%;
+}
+
+/* Bottom bar aka .ribbon */
+.ribbon {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: stretch;
+  background-color: #888888;
+  width: 100%;
+  padding: 20px 0 20px 0;
+  margin-top: 10px;
+  margin: 20px 0 0 0;
+}
+
+/* General mobile theme */
+@media screen and (max-width: 600px) {
+  /* Make full use of screen space
+  25% whitespace for desktop, 5% for mobile*/
+  .main {
+    align-self: center;
+    margin: 0 5% 0 5%;
+  }
+
+  /* Make the divs in the alternating segments in order in columns */
+  .main .altone {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* When using mobile view, .alttwo's child divs are reverted to their normal order to make the order of reading intuitive in a vertical layout */
+  .main .alttwo {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main .altone img {
+    max-width: 100%;
+    margin: 5px auto 5px auto;
+  }
+
+  .main .alttwo img {
+    max-width: 100%;
+    margin: 5px auto 5px auto;
+  }
+
+  .altone, .alttwo {
+    display: block;
+  }
+}

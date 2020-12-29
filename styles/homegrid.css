@@ -1,0 +1,70 @@
+/* Options grid configurations */
+/* DOES NOT WORK PROPERLY IN DESKTOP MODE */
+/* Using bootstrap doesn't work as well unfortunately */
+.optionsgrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.optionsgrid div h3 {
+  text-align: center;
+}
+
+.optionsgrid div p {
+  text-align: center;
+}
+
+.optionsgrid div img {
+  max-width: 80%;
+  margin: 0 10% 0 10%;
+  align-self: center;
+}
+
+
+/* Organise payment methods into the 2 by 3 grid in .optionsgrid */
+/* DOESN'T WORK */
+
+#disciplecardimg {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#disciplecarddesc {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#pisaimg {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#pisadesc {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#penpalimg {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+#penpaldesc {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
